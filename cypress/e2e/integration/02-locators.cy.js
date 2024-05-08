@@ -61,12 +61,21 @@ describe("CSS Locators", () => {
 
     // Locates all sibling of #unordered_list_item1
     cy.get("#unordered_list > #unordered_list_item1 ~ li");
+
+
+    /**
+     * Grouping Selectors ( , ) *
+     * 
+     * Description: Combines multiple selectors into one rule set, 
+     * allowing you to style different elements with the same set of styles.
+     */
   });
 
   it("Locating the element using Attribute Selectors", () => {
     // These are proper way to locate the class and id
     // cy.get("#checkbox-button-group");
     // cy.get(".checkbox");
+    cy.visit("https://www.techglobal-training.com/frontend/html-elements");
 
     cy.get('[id="checkbox-button-group"]');
     cy.get('[class="checkbox"]');
@@ -92,19 +101,37 @@ describe("CSS Locators", () => {
 
   it("Test Case", () => {
 
-    cy.visit('https://techglobal-training.com/frontend/dynamic-elements')
+    /**
+     * contains     => [class*="className"]
+     * starts-with  => [class^="className"]
+     * ends-with    => [class$="className"]
+     */
 
-
-
-    cy.get('[id*="box_1"]').should('be.visible')
-
-  });
-
-  it("Test Case", () => {
+    // cy.get('https://techglobal-training.com/frontend/dynamic-elements')
 
     cy.visit('https://techglobal-training.com/frontend/dynamic-elements')
+    
+    cy.get('[id^="box_1_"]').should('be.visible')
+    cy.get('[id^="box_2_"]').should('be.visible')
 
-    cy.get('[id*="box_2"]').should('be.visible')
-
+    cy.get('[id^="box_"]').each(($el) => {
+      expect($el).to.be.visible
+    })
   });
+
+  it('Pseudo Classes', () => {
+    cy.visit("https://www.techglobal-training.com/frontend/html-elements");
+
+    cy.get('#ordered_list li:first-child')
+    cy.get('#ordered_list li:last-child')
+    cy.get('#ordered_list li:nth-child(1)')
+
+    cy.get('#checkbox-button-group input:not(#checkbox_2)')
+
+    cy.get('#microsoft_check input').check()
+    cy.get('input:checked')
+
+    cy.get('input:not(:checked)')
+
+  })
 });
