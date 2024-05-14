@@ -2,7 +2,7 @@ describe("Handling iFrames", () => {
   beforeEach(() => {
     cy.visit("https://www.techglobal-training.com/frontend/");
     cy.contains(".cards", "IFrames").click();
-    
+
   });
 
   it("iFrame", () => {
@@ -49,4 +49,10 @@ describe("Handling iFrames", () => {
     cy.get('#result').should('have.text', `You entered: ${arr.join(' ')}`)
 
   })
+
+  it('nn', () => {
+
+
+  })
+  
 });
