@@ -279,7 +279,7 @@ describe("Assertions", () => {
     });
   });
 
-  it.only("Assertion Practices", () => {
+  it("Assertion Practices", () => {
     /**
      * 1. Go to https://techglobal-training.com/frontend
      * 2. Navigate to 'Html Elements' card
@@ -320,14 +320,5 @@ describe("Assertions", () => {
         .and("be.enabled")
         .and("not.have.attr", "required");
     });
-
-    /**
-     * 1. Go to https://techglobal-training.com/frontend
-     * 2. Navigate to 'Html Elements' card
-     * 3. From the "Dropdowns" section
-     * 4. Validate dropdown 1 and dropdown 2 is enabled
-     * 6. Enter Microsoft for dropdown 1 and Apple for dropdown 2
-     * 7. Validate options are selected
-     */
   });
 });
