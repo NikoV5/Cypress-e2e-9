@@ -279,7 +279,7 @@ describe("Assertions", () => {
     });
   });
 
-  it("Assertion Practices", () => {
+  it.only("Assertion Practices", () => {
     /**
      * 1. Go to https://techglobal-training.com/frontend
      * 2. Navigate to 'Html Elements' card
@@ -319,6 +319,32 @@ describe("Assertions", () => {
         .should("have.value", dates[index])
         .and("be.enabled")
         .and("not.have.attr", "required");
+    });
+
+    /**
+     * 1. Go to https://techglobal-training.com/frontend
+     * 2. Navigate to 'Html Elements' card
+     *
+     * 3. From the "Dropdowns" section
+     * 4. Validate dropdown 1 and dropdown 2 is enabled
+     * 6. Enter Microsoft for dropdown 1 and Apple for dropdown 2
+     * 7. Validate options are selected
+     */
+
+    const dropdowns = ["Microsoft", "Apple"];
+
+    cy.get("#company_dropdown1, #company_dropdown2").each(($el, index) => {
+      cy.wrap($el)
+        .select(dropdowns[index])
+        .should("be.enabled")
+        .and("have.value", dropdowns[index]);
+    });
+
+    cy.get("#company_dropdown1, #company_dropdown2").each(($el, index) => {
+      cy.wrap($el)
+        .select(dropdowns[index])
+        .find("option:selected")
+        .should("have.text", dropdowns[index]);
     });
   });
 });
