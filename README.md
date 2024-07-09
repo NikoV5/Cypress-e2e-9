@@ -40,6 +40,36 @@ import "cypress-real-events";
 ## Why do we need cypress-real-events dependency?
 Cypress default events are simulated. That means that all events like cy.click or cy.type are fired from javascript. That's why these events will be untrusted (event.isTrusted will be false) and they can behave a little different from real native events. But for some cases, it can be impossible to use simulated events, for example, to fill a native alert or copy to the clipboard. This plugin solves this problem.
 
+## Installing Cypress-drag-drop dependency within the framework CLI
+
+```bash
+
+```
+
+## Installing cypress-mochawesome-reporter dependency within the framework CLI
+
+```bash
+
+```
+
+## Installing dotenv dependency within the framework CLI
+
+```bash
+
+```
+
+## Installing cypress-grep dependency within the framework CLI
+
+```bash
+
+```
+
+## Installing eslint dependency within the framework CLI
+
+```bash
+
+```
+
 ## Running the cypress test runner
 
 ```bash
