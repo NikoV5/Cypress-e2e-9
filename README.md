@@ -55,7 +55,7 @@ Cypress default events are simulated. That means that all events like cy.click o
 ## Installing dotenv dependency within the framework CLI
 
 ```bash
-
+npm install dotenv -D
 ```
 
 ## Installing cypress-grep dependency within the framework CLI
