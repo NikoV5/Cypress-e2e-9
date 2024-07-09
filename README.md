@@ -45,30 +45,35 @@ Cypress default events are simulated. That means that all events like cy.click o
 ```bash
 
 ```
+NOTE: Since everything else is already configured as an existing framework, this is all you have to do. But normally, there is a more extensive download process which is why I included the link to the NPM page for this dependency to see the documentation if needed. 
 
 ## Installing cypress-mochawesome-reporter dependency within the framework CLI
 
 ```bash
-
+npm i --save-dev cypress-mochawesome-reporter
 ```
+NOTE: Since everything else is already configured as an existing framework, this is all you have to do. But normally, there is a more extensive download process which is why I included the link to the NPM page for this dependency to see the documentation if needed. 
 
 ## Installing dotenv dependency within the framework CLI
 
 ```bash
 npm install dotenv -D
 ```
+NOTE: Since everything else is already configured as an existing framework, this is all you have to do. But normally, there is a more extensive download process which is why I included the link to the NPM page for this dependency to see the documentation if needed. 
 
 ## Installing cypress-grep dependency within the framework CLI
 
 ```bash
-
+npm i -D @cypress/grep
 ```
+NOTE: Since everything else is already configured as an existing framework, this is all you have to do. But normally, there is a more extensive download process which is why I included the link to the NPM page for this dependency to see the documentation if needed. 
 
 ## Installing eslint dependency within the framework CLI
 
 ```bash
 
 ```
+NOTE: Since everything else is already configured as an existing framework, this is all you have to do. But normally, there is a more extensive download process which is why I included the link to the NPM page for this dependency to see the documentation if needed. 
 
 ## Running the cypress test runner
 
