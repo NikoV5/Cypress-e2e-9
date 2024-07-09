@@ -3,13 +3,13 @@ After cloning the repository, you need to install these dependencies within your
 - Node Package Manager (NPM)
 - [Cypress](https://www.npmjs.com/package/cypress)
 - [cypress-real-events](https://www.npmjs.com/package/cypress-real-events)
-- [cypress-drag-drop]
-- [grep]
-- [eslint/js]
-- [cypress-mochawesome-reporter]
-- [dotenv]
-- [eslint]
-- [globals]
+- [cypress-drag-drop]()
+- [cypress/grep](https://www.npmjs.com/package/@cypress/grep)
+- [eslint/js]()
+- [cypress-mochawesome-reporter]()
+- [dotenv](https://www.npmjs.com/package/dotenv)
+- [eslint](https://www.npmjs.com/package/eslint)
+- [globals]()
 
 
 
